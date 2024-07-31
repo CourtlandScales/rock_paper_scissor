@@ -1,0 +1,30 @@
+import random
+
+Play_game = str(input("Would you like start the game!? Click 'Y' to start & Click 'Q' to quit "))
+
+def voidgame_function():
+  chosen_byplayer = input("Choose rock, paper or scissors: ")
+  element_choice = ["rock", "paper", "scissors"]
+  chosen_byCPU = random.choice(element_choice)
+  if  chosen_byCPU  == "rock" and chosen_byplayer == "paper":
+        print("The YOU WON!!! " + chosen_byplayer + " The CPU choose: " + chosen_byCPU + "\n")
+  elif chosen_byCPU  == "rock" and chosen_byplayer == "scissors":
+        print("The CPU WON!!! " + chosen_byplayer + " The CPU choose: " + chosen_byCPU + "\n")
+  elif chosen_byCPU  == "paper" and chosen_byplayer == "scissors":
+        print("The YOU WON!!! " + chosen_byplayer + " The CPU choose: " + chosen_byCPU + "\n")
+  elif chosen_byCPU  == "paper" and chosen_byplayer == "rock":
+        print("The CPU WON!!! " + chosen_byplayer + " The CPU choose: " + chosen_byCPU + "\n")
+  elif chosen_byCPU  == "scissors" and chosen_byplayer == "rock":
+        print("The CPU WON!!! " + chosen_byplayer + " The CPU choose: " + chosen_byCPU + "\n")
+  elif chosen_byCPU  == "scissors" and chosen_byplayer == "paper":
+        print("The YOU WON!!! " + chosen_byplayer + " The CPU choose: " + chosen_byCPU + "\n")
+  else:
+        print("You chose the same as the CPU " + chosen_byCPU + "\n")
+#--------------------------------------------------------------------------
+if  Play_game == "Y":
+  while Play_game == "Y":
+    voidgame_function()
+    Play_game = str(input("Would you like play again!? Click 'Y' to start & Click anyother key to quit "))
+
+elif Play_game  == "Q":
+  print("Bye!")
